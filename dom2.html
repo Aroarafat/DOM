@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #second {
+            background-color: brown;
+        }
+
+        .blog {
+            border: 2px solid blue;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="blogs">
+        <header>
+            WELCOME TO MY BLOG
+        </header>
+        <main>
+            <header>
+                <h2>
+                    BLOGS LIST
+                </h2>
+                <ul id="blog-list">
+                    <li>blog-01 </li>
+                    <li> blog-02</li>
+                    <li> blog-03</li>
+                    <li> blog-04</li>
+                </ul>
+            </header>
+            <article class="blog">
+                <h1 id="first">this is me-1</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti neque iste, odio quisquam
+                    magnam
+                    numquam? Aliquid quos tempore natus assumenda libero quae? Est vitae voluptas nostrum iusto
+                    repellendus
+                    ducimus?</p>
+            </article>
+            <article class="blog">
+                <h1 id="second">this is me-2</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti neque iste, odio quisquam
+                    magnam
+                    numquam? Aliquid quos tempore natus assumenda libero quae? Est vitae voluptas nostrum iusto
+                    repellendus
+                    ducimus?</p>
+            </article>
+            <article class="blog">
+                <h1 id="third">this is me-3</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti neque iste, odio quisquam
+                    magnam
+                    numquam? Aliquid quos tempore natus assumenda libero quae? Est vitae voluptas nostrum iusto
+                    repellendus
+                    ducimus?</p>
+            </article>
+            <article class="blog">
+                <h1 id="fourth">this is me-4</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti neque iste, odio quisquam
+                    magnam
+                    numquam? Aliquid quos tempore natus assumenda libero quae? Est vitae voluptas nostrum iusto
+                    repellendus
+                    ducimus?</p>
+            </article>
+            <script>
+                // const blogTitles = document.getElementsByTagName('p');
+                // for (p of blogTitles) {
+                    // console.log(p.innerText);
+                }
+                // const blog = document.getElementsByTagName('h3');
+                // for (h3 of blog) {
+                // console.log(h3.innerText);
+                // }
+                // const thirdTitle = document.getElementById('third');
+                // thirdTitle.style.textAlign = 'center';
+                // const third = document.getElementById('third');
+                // third.innerText = 'title updated by me';
+                // third.style.backgroundColor = 'yellow';
+                const blogs = document.getElementsByClassName('blog');
+                for (const blog of blogs) {
+                    blog.style.border = '5px solid blue';
+                    blog.style.borderRadius = '10px';
+                    blog.style.margin = '5px';
+
+                }
+                // CREATE ELEMENT BY JAVASCRIPT
+                // CREATE THE ELEMENT
+                const li = document.createElement('li');
+                li.innerText = 'blog-05';
+                // WHERE TO
+                const ul = document.getElementById('blog-list');
+                // APPEND NEW ELEMENT
+                ul.appendChild(li);
+
+                // ADD-ARTICLE 
+                const article = document.createElement('article');
+                const h3 = document.createElement('h3');
+                h3.innerText = 'this is me 05';
+                const p = document.createElement('p');
+                p.innerText = 'loremepsum loremepsum loremepsum loremepsum loremepsum loremepsum loremepsum loremepsum loremepsum loremepsumloremepsum loremepsum';
+                article.appendChild('h3');
+                article.appendChild('p');
+                // PARENT OF ARTICLE
+                const blogSection = document.getElementById('blogs');
+                blog.appendChild('article');
+
+
+            </script>
+    </section>
+    </main>
+
+</body>
+
+</html>
